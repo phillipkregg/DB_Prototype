@@ -11,3 +11,19 @@
  *= require_self
  *= require_tree .
 */
+
+@import 'bootstrap';
+@import 'bourbon';
+
+
+body {
+  background: #e5e5e5;  
+}
+
+
+#main.container {
+  padding: 10px;
+  background: #fff;
+  @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+  
+}
