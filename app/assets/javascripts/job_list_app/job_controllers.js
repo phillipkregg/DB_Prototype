@@ -9,6 +9,11 @@ function JobListController($scope, $location) {
 	
 }
 
+JobListController.$inject = ['$scope', '$location'];
+
+
+
+
 
 function JobDetailController($scope, $routeParams) {
 	
