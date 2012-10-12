@@ -9,14 +9,30 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
 */
+
+//@import 'bootstrap_custom/variables';
+
+$pill_green:  #62C462;
+
 
 @import 'bootstrap';
 @import 'bourbon';
+@import 'angular-ui';
 
 
-body {
+h1,h2, h3, h4 {
+  color: #666;
+}
+
+.job_highlight {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  background:  #666;
+}
+
+body {  
   background: #e5e5e5;  
 }
 
@@ -27,3 +43,88 @@ body {
   @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
   
 }
+
+
+.green_row {
+  background: #cdeb8e; /* Old browsers */
+  background: -moz-linear-gradient(top,  #cdeb8e 0%, #a5c956 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #cdeb8e 0%,#a5c956 100%); /* IE10+ */
+  background: linear-gradient(top,  #cdeb8e 0%,#a5c956 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+.nav-pills .active {
+  a {
+    background: $pill_green;
+    
+    &:hover {
+      background: $pill_green;
+    }    
+  }   
+}
+
+
+.zone_box {
+  padding: 5px;
+  margin: 10px;
+  width: auto;
+  height: 150px;
+  background: #e5e5e5;
+  color: #666;
+  
+  @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+}
+
+
+.room_box {
+  padding: 20px;
+  margin: 10px;
+  width: auto;
+  height: auto;
+  background: #ff3300;
+  color: #fff;
+  float: left;
+  
+  @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+    
+}
+
+.clear_both {
+  clear: both;
+}
+
+
+
+.btn-primary {  
+  background: rgb(157,213,58); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(157,213,58,1) 0%, rgba(161,213,79,1) 50%, rgba(128,194,23,1) 51%, rgba(124,188,10,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(157,213,58,1)), color-stop(50%,rgba(161,213,79,1)), color-stop(51%,rgba(128,194,23,1)), color-stop(100%,rgba(124,188,10,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(157,213,58,1) 0%,rgba(161,213,79,1) 50%,rgba(128,194,23,1) 51%,rgba(124,188,10,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(157,213,58,1) 0%,rgba(161,213,79,1) 50%,rgba(128,194,23,1) 51%,rgba(124,188,10,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(157,213,58,1) 0%,rgba(161,213,79,1) 50%,rgba(128,194,23,1) 51%,rgba(124,188,10,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(157,213,58,1) 0%,rgba(161,213,79,1) 50%,rgba(128,194,23,1) 51%,rgba(124,188,10,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
+  
+  &:active {    
+    background: rgb(143,196,0); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(143,196,0,1) 0%, rgba(143,196,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(143,196,0,1)), color-stop(100%,rgba(143,196,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(143,196,0,1) 0%,rgba(143,196,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(143,196,0,1) 0%,rgba(143,196,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(143,196,0,1) 0%,rgba(143,196,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(143,196,0,1) 0%,rgba(143,196,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fc400', endColorstr='#8fc400',GradientType=0 ); /* IE6-9 */
+
+    
+    
+    
+  }
+  
+}
+
+@import 'bootstrap-combobox';

@@ -1,0 +1,103 @@
+
+
+<h3>Editing the <span class="job_highlight">{{ job.last_name }}, {{ job.first_name }}</span> Job</h3>
+
+<br />
+
+<!-- <ul id="fnol_tabs" class="nav nav-pills">
+  <li class="active"><a href="#fnol"  data-toggle="pill">FNOL</a></li>
+  <li><a href="#initial_inspection" data-toggle="pill">Initial Inspection</a></li>
+  <li><a href="#scoping" data-toggle="pill">Scoping</a></li>
+  <li><a href="#validation" data-toggle="pill">Validation</a></li>
+  <li><a href="#monitoring" data-toggle="pill">Monitoring</a></li>
+  <li><a href="#drawing" data-toggle="pill">Drawing</a></li>
+  <li><a href="#job_diary" data-toggle="pill">Job Diary</a></li>
+  <li><a href="#alerts" data-toggle="pill">Alerts</a></li>
+  <li><a href="#reporting" data-toggle="pill">Reporting</a></li>
+  <li><a href="#job_completion" data-toggle="pill">Job Completion</a></li>
+</ul>
+
+<div class="tab-content">
+	
+	<div class="tab-pane active" id="fnol" >
+		
+		<label>First Name</label>
+		<input type="text" value="{{ job.first_name }}" />
+		
+		<label>Last Name</label>
+		<input type="text" value="{{ job.last_name }}" />
+		
+		
+	</div>
+	
+	<div id="initial_inspection" class="tab-pane">		
+		initial_inspection		
+	</div>
+	
+	<div id="scoping" class="tab-pane">		
+		<ul>
+			<li ng-repeat="room in rooms">{{ room.room_name }}</li>
+		</ul>		
+	</div>
+	
+	<div id="validation" class="tab-pane">		
+		validation		
+	</div>
+	
+	<div id="monitoring" class="tab-pane">		
+		monitoring		
+	</div>
+	
+	<div id="drawing" class="tab-pane">		
+		drawing		
+	</div>
+	
+	<div id="job_diary" class="tab-pane">		
+		job_diary		
+	</div>
+	
+	<div id="alerts" class="tab-pane">		
+		alerts		
+	</div>
+	
+	<div id="reporting" class="tab-pane">		
+		reporting		
+	</div>
+	
+	<div id="job_completion" class="tab-pane">		
+		job_completion		
+	</div>
+	
+
+</div> -->
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">
+    	<i class="icon-chevron-left"></i>
+    	Back to Jobs    	
+    </a>
+    <ul class="nav">
+      <li class="active"><a href="#">FNOL</a></li>
+      <li><a href="/#/job/{{ job.id }}/initial_inspection">Initial Inspection</a></li>
+      <li><a href="/#/job/{{ job.id }}/zones" >Zones / Rooms</a></li>
+      <li><a href="#">Validation</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div>
+	<a class="btn btn-large" href="/#/">
+		<i class="icon-arrow-left"></i>
+		Cancel
+	</a>
+	<a class="btn btn-large btn-primary">
+		<i class="icon-check icon-white"></i>
+		Save {{ job.first_name }} {{ job.last_name }} Edits
+	</a>
+	
+</div>
+
+

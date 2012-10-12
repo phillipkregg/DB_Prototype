@@ -1,0 +1,26 @@
+<h3>Editing the <span class="job_highlight">{{ job.last_name }}, {{ job.first_name }}</span> Job</h3>
+
+<br />
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">
+    	<i class="icon-chevron-left"></i>
+    	Back to Jobs    	
+    </a>
+    <ul class="nav">
+      <li class="active"><a href="/#/job/{{ job.id }}/fnol">FNOL</a></li>
+      <li><a href="/#/job/{{ job.id }}/initial_inspection">Initial Inspection</a></li>
+      <li><a href="/#/job/{{ job.id }}/zones" >Zones / Rooms</a></li>
+      <li><a href="#">Validation</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+		<label>First Name</label>
+		<input type="text" value="{{ job.first_name }}" />
+		
+		<label>Last Name</label>
+		<input type="text" value="{{ job.last_name }}" />

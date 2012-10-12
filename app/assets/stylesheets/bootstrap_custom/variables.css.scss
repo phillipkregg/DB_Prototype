@@ -1,0 +1,107 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+$black:                 #000;
+$grayDarker:            #222;
+$grayDark:              #333;
+$gray:                  #555;
+$grayLight:             #999;
+$grayLighter:           #eee;
+$white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+$blue:                  #049cdb;
+$blueDark:              #0064cd;
+$green:                 #46a546;
+$red:                   #9d261d;
+$yellow:                #ffc40d;
+$orange:                #f89406;
+$pink:                  #c3325f;
+$purple:                #7a43b6;
+$servpro_orange:        #ff3300;
+$servpro_green:         #66cc00;
+
+
+
+
+// Sprite icons path
+// -------------------------
+$iconSpritePath:          "../img/glyphicons-halflings.png";
+$iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
+
+
+// Input placeholder text color
+// -------------------------
+$placeholderText:         $grayLight;
+
+
+// Hr border color
+// -------------------------
+$hrBorder:                $grayLighter;
+
+
+// Horizontal forms & lists
+// -------------------------
+$horizontalComponentOffset:       180px;
+
+
+// Wells
+// -------------------------
+$wellBackground:                  #f5f5f5;
+
+
+// Navbar
+// -------------------------
+$navbarCollapseWidth:             979px;
+
+$navbarHeight:                    40px;
+$navbarBackgroundHighlight:       #ffffff;
+$navbarBackground:                darken($navbarBackgroundHighlight, 5%);
+$navbarBorder:                    darken($navbarBackground, 12%);
+
+$navbarText:                      #777;
+$navbarLinkColor:                 #777;
+$navbarLinkColorHover:            $grayDark;
+$navbarLinkColorActive:           $gray;
+$navbarLinkBackgroundHover:       transparent;
+$navbarLinkBackgroundActive:      darken($navbarBackground, 5%);
+
+$navbarBrandColor:                $navbarLinkColor;
+
+// Inverted navbar
+$navbarInverseBackground:                $servpro_orange;
+$navbarInverseBackgroundHighlight:       $orange;
+$navbarInverseBorder:                    #252525;
+
+$navbarInverseText:                      $white;
+$navbarInverseLinkColor:                 $white;
+$navbarInverseLinkColorHover:            $white;
+$navbarInverseLinkColorActive:           $navbarInverseLinkColorHover;
+$navbarInverseLinkBackgroundHover:       transparent;
+$navbarInverseLinkBackgroundActive:      $navbarInverseBackground;
+
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%);
+$navbarInverseSearchBackgroundFocus:     $white;
+$navbarInverseSearchBorder:              $navbarInverseBackground;
+$navbarInverseSearchPlaceholderColor:    #ccc;
+
+$navbarInverseBrandColor:                $navbarInverseLinkColor;
+
+
+
+
+
+
+
+
+

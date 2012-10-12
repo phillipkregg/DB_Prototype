@@ -1,0 +1,33 @@
+<h3>Editing the <span class="job_highlight">{{ job.last_name }}, {{ job.first_name }}</span> Job</h3>
+
+<h3>{{ zone.zone_name }} Room List</h3>
+
+<table id="zones_table" class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Room Name</th>
+      <th>Width</th>
+      <th>Height</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="room in rooms">
+    	<td></td>
+    	<td>{{ room.room_name }}</td>
+    	<td>{{ room.width }}</td>
+    	<td>{{ room.height }}</td>    	
+    	<td>
+    		<a href="/#/job/{{ job.id }}/zones/{{ zone.zone_id }}/rooms/{{ room.room_id }}" class="btn" ng-click="getJob()">
+    			<i class="icon-pencil"></i>
+    			Edit
+    		</a>
+    	</td>
+    </tr>
+  </tbody>
+</table>
+
+<a class="btn btn-large btn-block" href="/#/job/{{ job.id }}/zones">Cancel</a>
+<br />
+<a class="btn btn-large btn-block btn-primary" href="/#/job/{{ job.id }}/zones">Save Changes</a>

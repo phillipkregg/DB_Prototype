@@ -1,0 +1,55 @@
+<h2>Jobs</h2>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.combobox').combobox();
+  });
+</script>
+
+
+<div>		  
+		
+	<select ui-select2 ng-model="select2">
+		<option value="">Choose a View</option>
+		<option value="one">First</option>
+		<option value="two">Second</option>
+		<option value="three">Third</option>
+	</select>
+	    
+	
+	<a href="/#/job/new" class="pull-right btn btn-large btn-primary" ng-click="newJob()">
+		<i class="icon-plus-sign icon-white"></i>
+		Create New Job
+	</a>
+	
+</div>
+
+
+<table id="job_list_table" class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Loss City</th>
+      <th>Job Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="job in jobs">
+    	<td>
+    		<a href="/#/job/{{ job.id }}/fnol" class="btn btn-large" ng-click="getJob()">    			
+    			Open Job
+    			<i class="icon-folder-open"></i>
+    		</a>
+    	</td>
+    	
+    	<td>{{ job.last_name }}</td>
+    	<td>{{ job.first_name }}</td>
+    	<td>{{ job.loss_city }}</td>
+    	<td>{{ job.job_type }}</td>
+    	
+    </tr>
+  </tbody>
+</table>
