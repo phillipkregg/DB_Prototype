@@ -31,6 +31,13 @@ function JobDetailController($scope, $routeParams) {
 	
 }
 
+JobDetailController.$inject = ['$scope', '$routeParams'];
+
+
+
+
+
+
 
 function ZonesRoomsController($scope, $routeParams) {
 				
@@ -80,7 +87,7 @@ function ZonesRoomsController($scope, $routeParams) {
 }
 
 
-
+ZonesRoomsController.$inject = ['$scope', '$routeParams'];
 
 
 
