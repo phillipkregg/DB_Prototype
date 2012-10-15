@@ -14,14 +14,18 @@
 //= require jquery_ujs
 //= require jquery-ui-1.9.0.custom.js
 //= require bootstrap
-//= require bootstrap-combobox
+//= require kendo.all.min.js
+//= require jstween.js
+
 
 //= require angular
+//= require angular-ui.js
 //= require angular-resource
-//= require angular-ui
+
 //= require_tree ./job_list_app
 //= require_tree ./job_list_app/templates
 //= require_self
+
 
 $(document).ready(function() {
 	
@@ -40,11 +44,25 @@ $(document).ready(function() {
 	});
 	
 	
+	
+	
+	
 	//********* Rooms - Zones drag and drop
 	
 	$(".room_box").draggable();
 	
-	
+	$(".room_box").on('mouseenter', function() {
+		$(this).tween({
+			backgroundColor:{
+	      start: '#000000',
+	      stop: '#0000FF',
+	      time: 0,
+	      duration: 1,
+	      effect:'easeInOut'
+	   	}
+		});
+	});
+		
 	
 	
 });

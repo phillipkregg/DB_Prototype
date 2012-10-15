@@ -3,6 +3,7 @@
 
 <br />
 
+
 <div class="navbar">
   <div class="navbar-inner">
     <a class="brand" href="#">
@@ -19,54 +20,129 @@
 </div>
 
 
-<table id="zones_table" class="table">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Zone Name</th>
-      <th>Width</th>
-      <th>Height</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="zone in zones">
-    	<td></td>
-    	<td>{{ zone.zone_name }}</td>
-    	<td>{{ zone.width }}</td>
-    	<td>{{ zone.height }}</td>    	
-    	<td>
-    		<a href="/#/job/{{ job.id }}/zones/{{zone.zone_id}}" class="btn" ng-click="getJob()">
-    			<i class="icon-pencil"></i>
-    			Edit
-    		</a>
-    	</td>
-    </tr>
-  </tbody>
-</table>
 
 
-<script type="text/ng-template" id="rooms-template.html">
- 	<p>Contents of partial2.html</p>
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-pills" id="zones_tabs">
+  <li class="active"><a href="#list" data-toggle="pill">List View</a></li>
+  <li><a href="#visual" data-toggle="tab">Visual View</a></li>  
+</ul>
+
+
+<div class="tab-content">
+	<div class="tab-pane active" id="list">
+		<table id="zones_table" class="table">
+		  <thead>
+		    <tr>
+		      <th></th>
+		      <th>Zone Name</th>
+		      <th>Width</th>
+		      <th>Height</th>
+		      <th></th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr ng-repeat="zone in zones">
+		    	<td></td>
+		    	<td>{{ zone.zone_name }}</td>
+		    	<td>{{ zone.width }}</td>
+		    	<td>{{ zone.height }}</td>    	
+		    	<td>
+		    		<a href="/#/job/{{ job.id }}/zones/{{zone.zone_id}}" class="btn" ng-click="getJob()">
+		    			<i class="icon-pencil"></i>
+		    			Edit
+		    		</a>
+		    	</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+	
+	<div class="tab-pane" id="visual">		
+		
+		<div class="well">	
+			<div ng-controller="ZonesRoomsController">	
+				
+				<div ui-jq="droppable" class="zone_box" ng-repeat="zone in zones">
+					<h4>{{ zone.zone_name }}</h4><br />
+					<div ng-repeat="room in zone.rooms" class="room_box"><a href="/#/job/{{ job.id }}/zones/{{zone.zone_id}}/rooms/{{ room.room_id }}" >{{ room.room_name }}</a></div>
+				</div>								
+			</div>			
+		</div>		
+		
+	</div>	
+	
+	
+	
+</div>
+
+
+<script>
+	$(document).ready(function() {
+		
+		$(".room_box").live('mouseenter', function() {			
+			$(this).tween({
+				backgroundColor:{
+		      start: '#ff3300',
+		      stop: ' #FF7F00',
+		      time: 0,
+		      duration: .5,
+		      effect:'easeInOut'
+		   },
+		   shadow:{
+		      start: '0px 0px 0px #000',
+		      stop: '10px 10px 30px #000',
+		      time: 0,
+		      duration: .5,
+		      effect:'easeInOut'
+		   }
+		   
+		   
+			}).play();
+		});
+		
+		$(".room_box").live('mouseleave', function() {			
+			$(this).tween({
+				backgroundColor:{
+		      start: '#FF7F00',
+		      stop: ' #ff3300',
+		      time: 0,
+		      duration: .5,
+		      effect:'easeInOut'
+		   },
+		   
+		   shadow:{
+		      start: '10px 10px 30px #000',
+		      stop: '0px 0px 0px #000',
+		      time: 0,
+		      duration: .5,
+		      effect:'easeInOut'
+		   }
+		   
+			}).play();
+		});
+		
+		
+		
+		
+		
+		
+	});
 </script>
 
 
-<h2>Visualization</h2>
 
-<div class="well">	
-	<div ng-controller="ZonesRoomsController">	
-		
-		<div ui-jq="droppable" class="zone_box" ng-repeat="zone in zones">
-			<h4>{{ zone.zone_name }}</h4><br />
-			<div ng-repeat="room in zone.rooms" class="room_box">{{ room.room_name }}</div>
-		</div>
-		
-		
-		
-	</div>
-	
 
-</div>
+
+
 
 <!-- <div class="well">
 	<h3>Rooms</h3>
@@ -80,9 +156,6 @@
 
 
 
-<script>
-	
-</script>
 
 
 

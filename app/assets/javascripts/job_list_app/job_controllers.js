@@ -16,10 +16,11 @@ JobListController.$inject = ['$scope', '$location'];
 
 
 function JobDetailController($scope, $routeParams) {
-	
+		
 	var job = Jobs.jobList[$routeParams.jobId - 1];
 	
 	$scope.job = job;	
+	var zones = job.zones;
 	
 	if (job.zones) {
 		$scope.zones = job.zones;	
@@ -32,7 +33,8 @@ function JobDetailController($scope, $routeParams) {
 		$scope.rooms = $scope.zone.rooms;
 		$scope.room = $scope.rooms[$routeParams.roomId - 1];
 	}
-			
+	
+				
 	
 }
 
@@ -48,8 +50,7 @@ function ZonesRoomsController($scope, $routeParams) {
 				
 		var job = Jobs.jobList[$routeParams.jobId - 1];
 	
-		$scope.job = job;	
-		
+		$scope.job = job;					
 		
 		var zones = job.zones;	
 		var rooms = [];
@@ -57,34 +58,29 @@ function ZonesRoomsController($scope, $routeParams) {
 		//console.log($scope.zones.length)
 		
 		if (zones) {
-			// for (var i=0; i < zones.length; i++) {				
-				// for (var j=0; j < zones[i].rooms.length; j++){
-					// rooms.push(zones[i].rooms[j])
+			// Get All rooms in every zone
+			for (var i=0; i < zones.length; i++) {				
+				for (var j=0; j < zones[i].rooms.length; j++){
+					rooms.push(zones[i].rooms[j])
+				}
+			}
+			// set room scope to ALL rooms
+			$scope.rooms = rooms;
+			$scope.room = $scope.rooms[$routeParams.roomId - 1];		
+			
+			
+			//**** Get Individual rooms per zone - instead of all rooms
+			// if (job.zones) {
+				// $scope.zones = job.zones;	
+				// $scope.zone = $scope.zones[$routeParams.zoneId - 1];
+// 				
+				// for(var i=0; i < $scope.zones.length; i++) {
+					// $scope.rooms = $scope.zones[i].rooms;
 				// }
+// 				
 			// }
 			
-			
-
-			//$scope.rooms = rooms;
-			
-			if (job.zones) {
-				$scope.zones = job.zones;	
-				$scope.zone = $scope.zones[$routeParams.zoneId - 1];
-				
-				for(var i=0; i < $scope.zones.length; i++) {
-					$scope.rooms = $scope.zones[i].rooms;
-				}
-				
-			}
-			
-			
-			
-			if ($scope.zone) {
-				$scope.rooms = $scope.zone.rooms;
-				$scope.room = $scope.rooms[$routeParams.roomId - 1];
-			}
-			
-			
+						
 			
 			
 		}

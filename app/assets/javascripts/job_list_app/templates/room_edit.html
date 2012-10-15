@@ -1,9 +1,19 @@
+
+
 <h3>Editing {{ room.room_name }}</h3>
+
+<h4>Zone:  {{ zone.zone_name }}</h4>
+
+<p>Room Id: {{ room.room_id }}</p>
+<p>Width: {{ room.width }}</p>
+<p>Height: {{ room.height }}</p>
 
 <div class="well">
 	<h2>Equipment List</h2>
 </div>
 
-<a class="btn btn-large btn-block" href="/#/job/{{ job.id }}/zones/{{ zone.zone_id }}">Cancel</a>
-<br />
-<a class="btn btn-large btn-block btn-primary" href="/#/job/{{ job.id }}/zones/{{ zone.zone_id }}">Save Room Changes</a>
+
+<a class="btn btn-large" href="/#/job/{{ job.id }}/zones/{{ zone.zone_id }}">Cancel</a>
+<a class="btn btn-large btn-primary" href="/#/job/{{ job.id }}/zones/{{ zone.zone_id }}">Save Room Changes</a>
+
+

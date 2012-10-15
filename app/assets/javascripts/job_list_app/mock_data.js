@@ -58,13 +58,35 @@ Jobs.jobList = [
 				  		room_name: "Garage",
 				  		width: 100,
 						height: 50				
+				   },
+				   { 
+				   	room_id: 6,
+				  		room_name: "Game Room",
+				  		width: 100,
+						height: 50				
 				   }
+				   
 				  
 				]
 				
 			},
-			
-			
+			{
+				zone_id: 3,
+				zone_name: "Third Zone",
+				width: 300,
+				height: 300,
+				
+				rooms: [
+					{ 
+						room_id: 7,
+				  		room_name: "Patio",
+				  		width: 100,
+						height: 50				
+				   }				   
+				  
+				]
+				
+			}			
 			
 		]		
 	},

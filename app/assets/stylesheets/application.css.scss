@@ -13,6 +13,9 @@
 
 //@import 'bootstrap_custom/variables';
 
+@import 'kendo.common.min.css';
+@import 'kendo.default.min.css';
+
 $pill_green:  #62C462;
 
 
@@ -90,7 +93,15 @@ body {
   color: #fff;
   float: left;
   
-  @include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+  //@include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+  
+  a {
+    color: #fff;
+  }
+  
+  &:hover {
+    cursor: pointer;
+  }
     
 }
 
