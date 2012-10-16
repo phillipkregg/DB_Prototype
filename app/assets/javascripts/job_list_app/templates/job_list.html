@@ -1,21 +1,27 @@
 <h2>Jobs</h2>
 
-<div>		  
+<hello-world></hello-world>
+
+
+
+<div id="jobs_options_header" class="row">		  
+	<div class="span6">
+		<select id="view_select">
+			<option value="">Choose View</option>
+			<option value="one">First</option>
+			<option value="two">Second</option>
+			<option value="three">Third</option>
+		</select>	
+	</div>	
+	
+	<div class="span6">	
+		<a href="/#/job/new" class="pull-right btn btn-large btn-primary" ng-click="newJob()">
+			<i class="icon-plus-sign icon-white"></i>
+			Create New Job
+		</a>
+	</div>    
 		
-	<select id="view_select">
-		<option value="">Choose View</option>
-		<option value="one">First</option>
-		<option value="two">Second</option>
-		<option value="three">Third</option>
-	</select>
-	    
-	
-	<a href="/#/job/new" class="pull-right btn btn-large btn-primary" ng-click="newJob()">
-		<i class="icon-plus-sign icon-white"></i>
-		Create New Job
-	</a>
-	
-</div> <br/><br />
+</div>
 
 
 <table id="job_list_table" class="table table-bordered">

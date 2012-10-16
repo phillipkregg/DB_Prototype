@@ -2,25 +2,52 @@
 
 <br />
 
-<div class="navbar">
-  <div class="navbar-inner">
-    <a class="brand" href="#">
-    	<i class="icon-chevron-left"></i>
-    	Back to Jobs    	
-    </a>
-    <ul class="nav">
-      <li class="active"><a href="/#/job/{{ job.id }}/fnol">FNOL</a></li>
-      <li><a href="/#/job/{{ job.id }}/initial_inspection">Initial Inspection</a></li>
-      <li><a href="/#/job/{{ job.id }}/zones" >Zones / Rooms</a></li>
-      <li><a href="#">Validation</a></li>
-    </ul>
-  </div>
-</div>
+<job_sub_nav></job_sub_nav>
 
+<ul class="nav nav-pills" id="fnol_tabs">
+  <li class="active"><a href="#contact_information"  data-toggle="tab">Contact Information</a></li>
+  <li><a href="#job_details"  data-toggle="tab">Job Details</a></li>
+  <li><a href="#site_assessment"  data-toggle="tab">Site Assessment</a></li>
+  <li><a href="#client"  data-toggle="tab">Client</a></li>
+  <li><a href="#related_contacts"  data-toggle="tab">Related Contacts</a></li>
+</ul>
+ 
+<div class="tab-content">
 
-
-		<label>First Name</label>
-		<input type="text" value="{{ job.first_name }}" />
+	<div class="tab-pane active" id="contact_information">
 		
-		<label>Last Name</label>
-		<input type="text" value="{{ job.last_name }}" />
+		<div class="contact_boxes">
+			<h4>Caller Details</h4>
+			
+			<div id="caller">
+				<label>First Name</label>
+				<input type="text" value="{{ job.first_name }}" />
+				
+				<label>Last Name</label>
+				<input type="text" value="{{ job.last_name }}" />
+			</div>
+			
+			
+		</div>	
+		
+		
+	
+	
+	
+	</div>
+	<div class="tab-pane" id="job_details">
+		Job Details here
+	</div>
+	<div class="tab-pane" id="site_assessment">
+		Site Assessment here
+	</div>
+	<div class="tab-pane" id="client">
+		Client here
+	</div>
+	<div class="tab-pane" id="related_contacts">
+		Related Contacts here
+	</div>
+
+
+
+</div> <!-- End Tabs Container -->

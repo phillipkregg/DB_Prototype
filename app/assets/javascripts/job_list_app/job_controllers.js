@@ -6,6 +6,7 @@ function JobListController($scope, $location) {
 	$scope.clickTest = function() {
 		alert('howdy');
 	}
+		
 	
 }
 
