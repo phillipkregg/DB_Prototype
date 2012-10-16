@@ -52,5 +52,4 @@ angular.module('components', [])
 		
 	});
 	
-	
-components.$inject = ['$scope'];
+
