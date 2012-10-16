@@ -16,20 +16,129 @@
 
 	<div class="tab-pane active" id="contact_information">
 		
-		<div class="contact_boxes">
-			<h4>Caller Details</h4>
+		<div class="contact_boxes" >
+			<div>
+				<h4 class="pull-left">Caller Details</h4>
+				<a class="pull-right btn" ng-click="editCaller()">
+					<i class="icon-edit"></i>
+				</a>
+				<div style="clear: both"></div>
+			</div>
+			<div ng-hide="isCallerEditable">
+				<p>First Name: {{ caller.first_name }}</p>
+				<p>Last Name: {{ caller.last_name }}</p>
+				<p>Company: {{ caller.company_name }}</p>
+				<p>Phone Number:  {{ caller.phone_numbers.primary }}</p>
+			</div>
 			
-			<div id="caller">
+			
+			<div id="caller_edit" ng-show="isCallerEditable">
 				<label>First Name</label>
-				<input type="text" value="{{ job.first_name }}" />
+				<input type="text" value="{{ caller.first_name }}" />
 				
 				<label>Last Name</label>
-				<input type="text" value="{{ job.last_name }}" />
+				<input type="text" value="{{ caller.last_name }}" />
+				
+				<label>Company Name</label>
+				<input type="text" value="{{ caller.company_name }}" />
+				
+				<label>Phone Number</label>
+				<input type="text" value="{{ caller.phone_numbers.primary }}" />
+				
+				<label>Address</label>
+				<input type="text" value="{{ caller.address }}" />
+				
+				<label>City</label>
+				<input type="text" value="{{ caller.city }}" />
+				
+				<label>State</label>
+				<input type="text" value="{{ caller.state }}" />
+				
+				<div>
+					<a class="btn btn-large" ng-click="cancelCallerEdits()">Cancel</a>
+					<a class="btn btn-large btn-primary" ng-click="saveCallerEdits()">Save Caller</a>
+				</div>
+			</div>
+			
+			
+		</div>	
+		<div class="contact_boxes">			
+			
+			<div>
+				<h4 class="pull-left">Customer / Insured</h4>
+				<a class="pull-right btn" ng-click="editCustomer()">
+					<i class="icon-edit"></i>
+				</a>
+				<div style="clear: both"></div>
+			</div>
+			<div ng-hide="isCustomerEditable">
+				<p>First Name: {{ customer.first_name }}</p>
+				<p>Last Name: {{ customer.last_name }}</p>
+				<p>Company: {{ customer.company_name }}</p>
+				<p>Phone Number:  {{ customer.phone_numbers.primary }}</p>
+			</div>
+			
+			<div id="customer" ng-show="isCustomerEditable">
+				<label>First Name</label>
+				<input type="text" value="{{ customer.first_name }}" />
+				
+				<label>Last Name</label>
+				<input type="text" value="{{ customer.last_name }}" />
+				
+				<label>Company Name</label>
+				<input type="text" value="{{ customer.company_name }}" />
+				
+				<label>Phone Number</label>
+				<input type="text" value="{{ customer.phone_numbers.primary }}" />
+				
+				<label>Address</label>
+				<input type="text" value="{{ customer.address }}" />
+				
+				<label>City</label>
+				<input type="text" value="{{ customer.city }}" />
+				
+				<label>State</label>
+				<input type="text" value="{{ customer.state }}" />
+				
+				<div>
+					<a class="btn btn-large" ng-click="cancelCustomerEdits()">Cancel</a>
+					<a class="btn btn-large btn-primary" ng-click="saveCustomerEdits()">Save Caller</a>
+				</div>
+				
 			</div>
 			
 			
 		</div>	
 		
+		<div class="contact_boxes">
+			<h4>Occupant</h4>
+			
+			<div id="occupant" ng-show="isOccupantEditable">
+				<label>First Name</label>
+				<input type="text" value="{{ occupant.first_name }}" />
+				
+				<label>Last Name</label>
+				<input type="text" value="{{ occupant.last_name }}" />
+				
+				<label>Company Name</label>
+				<input type="text" value="{{ occupant.company_name }}" />
+				
+				<label>Phone Number</label>
+				<input type="text" value="{{ occupant.phone_numbers.primary }}" />
+				
+				<label>Address</label>
+				<input type="text" value="{{ occupant.address }}" />
+				
+				<label>City</label>
+				<input type="text" value="{{ occupant.city }}" />
+				
+				<label>State</label>
+				<input type="text" value="{{ occupant.state }}" />
+			</div>
+		</div>
+		
+		
+			
 		
 	
 	

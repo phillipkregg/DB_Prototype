@@ -10,6 +10,70 @@ Jobs.jobList = [
 		loss_city: "Hartford",
 		job_type: "Water",
 		
+		contact_information: 
+			{
+				caller:	{
+						last_name: "Bauer",
+						first_name: "Jack",
+						company_name: "Some Company",
+						phone_numbers:	{
+								primary: "555-123-4567",
+								cell: "555-987-5432"
+							},
+						
+						address: "1600 Culture Shock Blvd.",
+						city: "Phonix",
+						state: "Arizona",
+						zip: "12345",
+						email: "jackb@fakemail.com"										
+					},
+				
+				customer: {
+						last_name: "Bauer",
+						first_name: "Jack",
+						company_name: "Some Company",
+						phone_numbers: {
+								primary: "555-123-4567",
+								cell: "555-987-5432"
+							},
+						
+						address: "1600 Culture Shock Blvd.",
+						city: "Phonix",
+						state: "AZ",
+						zip: "12345",
+						email: "jackb@fakemail.com"										
+					},
+				
+				occupant: {
+						last_name: "Bauer",
+						first_name: "Jack",
+						company_name: "Some Company",
+						phone_numbers: {
+								primary: "555-123-4567",
+								cell: "555-987-5432"
+							},
+						
+						address: "1600 Culture Shock Blvd.",
+						city: "Phonix",
+						state: "Arizona",
+						zip: "12345",
+						email: "jackb@fakemail.com"										
+					},
+				
+				loss_address:	{
+						address1: "1200 Main Ave.",
+						address2: "Apt 1408",
+						zip: "54321",
+						city: "Hartford",
+						state: "CT",
+						directions: "Turn left at so and so drive..."									
+					}	
+				
+							
+			},
+		
+		
+		
 		zones: [
 			{
 				zone_id: 1,
