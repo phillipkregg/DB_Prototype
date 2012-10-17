@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require jquery-ui-1.9.0.custom.js
 //= require bootstrap
-//= require kendo.all.min.js
+
 //= require jstween.js
 //= require jquery.flippy.js
 

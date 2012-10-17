@@ -14,7 +14,7 @@
 //@import 'bootstrap_custom/variables';
 
 @import 'kendo.common.min.css';
-@import 'kendo.default.min.css';
+//@import 'kendo.default.min.css';
 
 $pill_green:  #62C462;
 
@@ -42,7 +42,7 @@ body {
   img#mascots {
     position: absolute;
     top: 50px;
-    left:-600px;
+    left:-400px;
     z-index: -100;
     
     /* Required for IE 5, 6, 7 */
@@ -274,6 +274,15 @@ h1,h2, h3, h4 {
   .contact_view {
     padding: 20px;   
     height: 200px; 
+    
+      .view_group {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #666;
+        
+      }
+    
   }
   
   .contact_edit {
@@ -285,11 +294,7 @@ h1,h2, h3, h4 {
     color: white;
   }
   
-  p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #666;
-  }
+  
   
   .fnol_label {
     margin-right: 5px;
@@ -297,6 +302,11 @@ h1,h2, h3, h4 {
     //font-style: italic;
     font-weight: 200;
   }
+  
+  .fnol_data {
+    
+  }
+  
   
 }
 
