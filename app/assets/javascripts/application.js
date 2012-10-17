@@ -16,6 +16,7 @@
 //= require bootstrap
 //= require kendo.all.min.js
 //= require jstween.js
+//= require jquery.flippy.js
 
 
 //= require angular

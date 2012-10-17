@@ -24,6 +24,96 @@ $pill_green:  #62C462;
 @import 'angular-ui';
 
 
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+html {
+  height: 100%;
+}
+
+body {  
+  height: 100%;
+  //background: #e5e5e5;  
+  
+  background: url("/assets/gray_gradient_bg_1.png");
+  
+  img#mascots {
+    position: absolute;
+    top: 50px;
+    left:-600px;
+    z-index: -100;
+    
+    /* Required for IE 5, 6, 7 */
+    /* ...or something to trigger hasLayout, like zoom: 1; */
+    //width: 100%; 
+      
+    /* Theoretically for IE 8 & 9 (more valid) */ 
+    /* ...but not required as filter works too */
+    /* should come BEFORE filter */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    
+    /* This works in IE 8 & 9 too */
+    /* ... but also 5, 6, 7 */
+    filter: alpha(opacity=10);
+    
+    /* Older than Firefox 0.9 */
+    -moz-opacity:0.1;
+    
+    /* Safari 1.x (pre WebKit!) */
+    -khtml-opacity: 0.1;
+      
+    /* Modern!
+    /* Firefox 0.9+, Safari 2?, Chrome any?
+    /* Opera 9+, IE 9+ */
+    opacity: 0.1;
+    
+  }
+  
+}
+
+
+
+
+.opacity {
+    /* Required for IE 5, 6, 7 */
+    /* ...or something to trigger hasLayout, like zoom: 1; */
+    //width: 100%; 
+      
+    /* Theoretically for IE 8 & 9 (more valid) */ 
+    /* ...but not required as filter works too */
+    /* should come BEFORE filter */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    
+    /* This works in IE 8 & 9 too */
+    /* ... but also 5, 6, 7 */
+    filter: alpha(opacity=80);
+    
+    /* Older than Firefox 0.9 */
+    -moz-opacity:0.8;
+    
+    /* Safari 1.x (pre WebKit!) */
+    -khtml-opacity: 0.8;
+      
+    /* Modern!
+    /* Firefox 0.9+, Safari 2?, Chrome any?
+    /* Opera 9+, IE 9+ */
+    opacity: 0.8;
+}
+
+
+
+#main.container {
+  padding: 10px;
+  background: #fff;
+  //@include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
+  @include border-radius(5px);
+}
+
+
+
+
 h1,h2, h3, h4 {
   color: #666;
 }
@@ -62,17 +152,6 @@ h1,h2, h3, h4 {
   background:  #666;
 }
 
-body {  
-  background: #e5e5e5;  
-}
-
-
-#main.container {
-  padding: 10px;
-  background: #fff;
-  //@include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
-  
-}
 
 
 .green_row {
@@ -175,14 +254,48 @@ body {
 }
 
 
-#contact_information .contact_boxes {
-  float: left;
-  margin: 10px;
-  padding: 20px;
-  background: #e5e5e5;
+#contact_information {
+  .contact_boxes {        
+    margin-bottom: 5px;
+    background: #e5e5e5;
   
-  h4 {
+  }
     
+  
+  .contact_header {
+    color: #fff;
+    padding: 10px 20px;
+    background: #666;
+    margin-bottom: 10px;
+  }
+  
+  
+  
+  .contact_view {
+    padding: 20px;   
+    height: 200px; 
+  }
+  
+  .contact_edit {
+    padding: 20px;
+    
+  }
+  
+  h4 {    
+    color: white;
+  }
+  
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+  }
+  
+  .fnol_label {
+    margin-right: 5px;
+    font-size: 20px;
+    //font-style: italic;
+    font-weight: 200;
   }
   
 }

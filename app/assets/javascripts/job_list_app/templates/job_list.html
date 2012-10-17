@@ -15,7 +15,7 @@
 	</div>	
 	
 	<div class="span6">	
-		<a href="/#/job/new" class="pull-right btn btn-large btn-primary" ng-click="newJob()">
+		<a href="/#/job/new" class="pull-right btn btn-primary" ng-click="newJob()">
 			<i class="icon-plus-sign icon-white"></i>
 			Create New Job
 		</a>
@@ -37,14 +37,14 @@
   <tbody>
     <tr ng-repeat="job in jobs">
     	<td>
-    		<a href="/#/job/{{ job.id }}/fnol" class="btn btn-large" ng-click="getJob()">    			
+    		<a href="/#/job/{{ job.id }}/fnol" class="btn" ng-click="getJob()">    			
     			Open Job
     			<i class="icon-folder-open"></i>
     		</a>
     	</td>
     	
     	<td>{{ job.last_name }}</td>
-    	<td>{{ job.first_name }}</td>
+    	<td ng-model="callerFirstName">{{ job.first_name }}</td>
     	<td>{{ job.loss_city }}</td>
     	<td>{{ job.job_type }}</td>
     	
