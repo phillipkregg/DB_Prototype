@@ -74,8 +74,6 @@ body {
 }
 
 
-
-
 .opacity {
     /* Required for IE 5, 6, 7 */
     /* ...or something to trigger hasLayout, like zoom: 1; */
@@ -104,11 +102,12 @@ body {
 
 
 
-#main.container {
+#main.container-fluid {
+  margin: 10px 50px 0px 50px;
   padding: 10px;
   background: #fff;
-  //@include box-shadow(0 0 5px 3px hsla(0, 0%, 0%, 0.65));
-  @include border-radius(5px);
+  @include box-shadow(0 0 2px 2px hsla(0, 0%, 0%, 0.50));
+  
 }
 
 
@@ -121,6 +120,7 @@ h1,h2, h3, h4 {
 
 #drybook_header {  
   margin-top: 10px;
+  margin-left: 20px;
   
   
   img#servpro_logo{
@@ -256,6 +256,7 @@ h1,h2, h3, h4 {
 
 #contact_information {
   .contact_boxes {        
+    float: left;
     margin-bottom: 5px;
     background: #e5e5e5;
   
