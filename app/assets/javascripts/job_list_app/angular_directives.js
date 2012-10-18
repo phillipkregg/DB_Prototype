@@ -50,6 +50,13 @@ angular.module('components', [])
 			templateUrl: 'assets/job_list_app/templates/directives/job_sub_nav.html'
 		}
 		
+	}).directive('notepad', function() {
+		return {
+			restrict: 'E',
+			
+			templateUrl: 'assets/job_list_app/templates/directives/notepad.html'
+		}
+		
 	});
 	
 

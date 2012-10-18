@@ -106,7 +106,10 @@ body {
   margin: 10px 50px 0px 50px;
   padding: 10px;
   background: #fff;
+  
   @include box-shadow(0 0 2px 2px hsla(0, 0%, 0%, 0.50));
+  
+   
   
 }
 
@@ -254,12 +257,12 @@ h1,h2, h3, h4 {
 }
 
 
-#contact_information {
+#contact_information {  
+  
   .contact_boxes {        
     float: left;
     margin-bottom: 5px;
-    background: #e5e5e5;
-  
+    background: #e5e5e5;    
   }
     
   
@@ -273,14 +276,26 @@ h1,h2, h3, h4 {
   
   
   .contact_view {
-    padding: 20px;   
+    padding: 10px;   
     height: 200px; 
     
       .view_group {
         margin-bottom: 10px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
         color: #666;
+        
+        .fnol_label {
+          margin-right: 5px;
+          font-size: 16px;
+          //font-style: italic;
+          font-weight: 200;
+        }
+  
+        .fnol_data {
+          
+        }
+        
         
       }
     
@@ -294,17 +309,38 @@ h1,h2, h3, h4 {
   h4 {    
     color: white;
   }
+    
   
+}
+
+
+
+//****** Notepad styles
+
+.notepad_container {
   
+  float: right;
   
-  .fnol_label {
-    margin-right: 5px;
-    font-size: 20px;
-    //font-style: italic;
-    font-weight: 200;
+  .notepad_header {    
+    background: rgb(238,118,0); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(238,118,0,1) 0%, rgba(255,51,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,118,0,1)), color-stop(100%,rgba(255,51,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(238,118,0,1) 0%,rgba(255,51,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(238,118,0,1) 0%,rgba(255,51,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(238,118,0,1) 0%,rgba(255,51,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(238,118,0,1) 0%,rgba(255,51,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee7600', endColorstr='#ff3300',GradientType=0 ); /* IE6-9 */
+
+    padding: 10px;
+    
+    h3 {
+      color: #fff;
+    }
+    
   }
   
-  .fnol_data {
+  .notepad_body {
+    
     
   }
   
