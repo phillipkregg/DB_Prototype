@@ -1,20 +1,32 @@
 
+<h4><a href="/#/job/{{ job.id }}/fnol">{{ job.last_name }}, {{ job.first_name }} Job</a></h4>
 
 <h3 ng-model="selectedEquipment">Editing {{ selectedEquipment.type }} {{ selectedEquipment.model }}</h3>
 
-<img src="{{ selectedEquipment.image }}" />
 
-<br />
+<p>Edit Equipment options will go here</p><br/><br/>
 
-<div>
-	<a class="btn">
-		<i class="icon-remove"></i>
-		Remove From Job
-	</a>
-	<a class="btn">
-		<i class="icon-share-alt"></i>
-		Assign to Different Job
-	</a>
+<div id="equipment_edit_container">
+	
+	<div id="equipment_edit_options" class="pull-right">
+		<a class="btn btn-danger">
+			<i class="icon-remove icon-white"></i>
+			Remove From Job
+		</a>
+		<a class="btn btn-inverse">
+			<i class="icon-share-alt icon-white"></i>
+			Assign to Different Job
+		</a>
+		
+	</div>
+	
+	<img src="{{ selectedEquipment.image }}" />
+	
+	<br />
+	
+	
 	
 </div>
 
+<a class="btn btn-large" href="/#/job/{{ job.id }}/zones/{{ zone.zone_id }}/rooms/{{ room.room_id }}">Cancel</a>
+<a class="btn btn-large btn-primary" href="/#/job/{{ job.id }}/zones/{{ zone.zone_id }}/rooms/{{ room.room_id }}">Save Room Changes</a>

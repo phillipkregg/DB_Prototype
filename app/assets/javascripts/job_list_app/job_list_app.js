@@ -9,8 +9,10 @@ angular.module('job_list_app', ['ui', 'components']).
 			when("/job/:jobId/zones", { controller: JobDetailController, templateUrl: 'assets/job_list_app/templates/zones.html' }).			
 			when("/job/:jobId/zones/:zoneId", { controller: JobDetailController, templateUrl: 'assets/job_list_app/templates/zone_edit.html' }).
 			when("/job/:jobId/initial_inspection", { controller: JobDetailController, templateUrl: 'assets/job_list_app/templates/initial_inspection.html' }).
+			when("/job/:jobId/zones/:zoneId/rooms/new", { controller: ZonesRoomsController, templateUrl: 'assets/job_list_app/templates/rooms_new.html' }).
 			when("/job/:jobId/zones/:zoneId/rooms/:roomId", { controller: ZonesRoomsController, templateUrl: 'assets/job_list_app/templates/room_edit.html' }).
 			when("/job/:jobId/zones/:zoneId/rooms/:roomId/equipment/:equipmentId", { controller: ZonesRoomsController, templateUrl: 'assets/job_list_app/templates/equipment_edit.html' })
+			
 			
 		
 	}]);

@@ -37,7 +37,7 @@
 				Add Zone
 			</a>
 			<br/><br/>
-			<div ng-controller="ZonesRoomsController">				
+			<div>				
 				<div ui-jq="droppable" class="zone_box" ng-repeat="zone in zones">
 					
 					<div class="visual_zone_header">						
@@ -60,10 +60,9 @@
 								{{ room.room_name }}
 							</a>
 						</div>
-						<div >
-							<a class="btn btn-inverse">
-								<i class="icon-plus icon-white"></i>
-								Add Room
+						<div class="add_room_button">
+							<a href="/#/job/{{ job.id }}/zones/{{ zone.zone_id }}/rooms/new">
+								<i class="icon-plus"></i>								
 							</a>		
 						</div>	
 									

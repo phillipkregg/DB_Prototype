@@ -119,6 +119,42 @@ $(document).ready(function() {
 	});
 	
 	
+	//****** ADD ROOM BUTTON
+	
+	$(".add_room_button").on('mouseenter', function() {
+		$(this).tween({
+		   backgroundColor:{
+		      start: '#000000',
+		      stop: '#0000FF',
+		      time: 0,
+		      duration: 1,
+		      effect:'easeInOut'
+		   }
+		}).play
+		
+		
+	});
+	
+	$(".add_room_button").on('mouseleave', function() {
+		$(this).tween({
+		   backgroundColor:{
+		      start: '#0000ff',
+		      stop: '#000000',
+		      time: 0,
+		      duration: 1,
+		      effect:'easeInOut'
+		   }
+		}).play
+		
+		
+	});
+	
+	
+ 
+	
+	
+	
+	
 	
 	
 	

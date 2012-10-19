@@ -20,8 +20,8 @@
 		
 		<!-- <notepad class="pull-right"></notepad> --> 
 		
-		<div class="row pull-left"> <!-- Row Start -->		
-			<div class="contact_boxes span5" >
+		<div class="row-fluid pull-left"> <!-- Row Start -->		
+			<div class="contact_boxes" >
 				<div class="contact_header">
 					<h4 class="pull-left">Caller Details</h4>
 					<a class="pull-right btn" ng-click="editCaller()">
@@ -29,32 +29,42 @@
 					</a>
 					<div style="clear: both"></div>
 				</div>
-				<div id="caller_view" class="contact_view" ng-hide="isCallerEditable">
-					<div class="row">
-						<div class="view_group">
-							<span class="fnol_label span2 pull-left">First Name:</span> 
-							<span class="fnol_data">{{ caller.first_name }}</span>
+				
+				
+				
+				<div id="caller_view" class="contact_view" ng-hide="isCallerEditable">	
+					
+					<img class="contact_image" src="/assets/jack-bauer.jpg" />
+								
+					
+					<div class="pull-left">
+						<div class="row-fluid">
+							<div class="view_group">
+								<span class="span3 fnol_label pull-left">First Name:</span> 
+								<span class="fnol_data">{{ caller.first_name }}</span>
+							</div>
 						</div>
+						
+						<div class="row-fluid">
+							<div class="view_group">
+								<span class="span3 pull-left fnol_label">Last Name:</span> 
+								<span class="fnol_data">{{ caller.last_name }}</span>
+							</div>
+						</div>
+						<div class="row-fluid">
+							<div class="view_group">
+								<span class="span3 pull-left fnol_label">Company:</span> 
+								<span class="fnol_data">{{ caller.company_name }}</span>
+							</div>
+						</div>
+						<div class="row-fluid">
+							<div class="view_group">
+								<span class="span3 pull-left fnol_label">Phone:</span> 
+								<span class="fnol_data">{{ caller.phone_numbers.primary }}</span>
+							</div>
+						</div>					
 					</div>
 					
-					<div class="row">
-						<div class="view_group">
-							<span class="span2 pull-left fnol_label">Last Name:</span> 
-							<span class="fnol_data">{{ caller.last_name }}</span>
-						</div>
-					</div>
-					<div class="row">
-						<div class="view_group">
-							<span class="span2 pull-left fnol_label">Company:</span> 
-							<span class="fnol_data">{{ caller.company_name }}</span>
-						</div>
-					</div>
-					<div class="row">
-						<div class="view_group">
-							<span class="span2 pull-left fnol_label">Phone:</span> 
-							<span class="fnol_data">{{ caller.phone_numbers.primary }}</span>
-						</div>
-					</div>
 				</div>
 				
 				
@@ -88,7 +98,7 @@
 				
 				
 			</div>	
-			<div class="contact_boxes span5 pull-right">			
+			<div class="contact_boxes">			
 				
 				<div class="contact_header">
 					<h4 class="pull-left">Customer / Insured</h4>
@@ -98,28 +108,28 @@
 					<div style="clear: both"></div>
 				</div>
 				<div id="customer_view" class="contact_view" ng-hide="isCustomerEditable">
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="fnol_label span2 pull-left">First Name:</span> 
+							<span class="fnol_label span3 pull-left">First Name:</span> 
 							<span class="fnol_data">{{ customer.first_name }}</span>
 						</div>
 					</div>
 					
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="span2 pull-left fnol_label">Last Name:</span> 
+							<span class="span3 pull-left fnol_label">Last Name:</span> 
 							<span class="fnol_data">{{ customer.last_name }}</span>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="span2 pull-left fnol_label">Company:</span> 
+							<span class="span3 pull-left fnol_label">Company:</span> 
 							<span class="fnol_data">{{ customer.company_name }}</span>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="span2 pull-left fnol_label">Phone:</span> 
+							<span class="span3 pull-left fnol_label">Phone:</span> 
 							<span class="fnol_data">{{ customer.phone_numbers.primary }}</span>
 						</div>
 					</div>
@@ -159,7 +169,7 @@
 		<!-- </div> --> <!-- Row End -->
 		
 		<!-- <div class="row"> --><!--  Row Start -->		
-			<div class="contact_boxes span5">			
+			<div class="contact_boxes ">			
 				<div class="contact_header">
 					<h4 class="pull-left">Occupant</h4>
 					<a class="pull-right btn" ng-click="editOccupant()">
@@ -168,28 +178,28 @@
 					<div style="clear: both"></div>
 				</div>
 				<div id="occupant_view" class="contact_view" ng-hide="isOccupantEditable">
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="fnol_label span2 pull-left">First Name:</span> 
+							<span class="fnol_label span3 pull-left">First Name:</span> 
 							<span class="fnol_data">{{ occupant.first_name }}</span>
 						</div>
 					</div>
 					
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="span2 pull-left fnol_label">Last Name:</span> 
+							<span class="span3 pull-left fnol_label">Last Name:</span> 
 							<span class="fnol_data">{{ occupant.last_name }}</span>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="span2 pull-left fnol_label">Company:</span> 
+							<span class="span3 pull-left fnol_label">Company:</span> 
 							<span class="fnol_data">{{ occupant.company_name }}</span>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="span2 pull-left fnol_label">Phone:</span> 
+							<span class="span3 pull-left fnol_label">Phone:</span> 
 							<span class="fnol_data">{{ occupant.phone_numbers.primary }}</span>
 						</div>
 					</div>
@@ -223,7 +233,7 @@
 				</div>				
 			</div>	
 			
-			<div class="contact_boxes span5">				
+			<div class="contact_boxes ">				
 				<div class="contact_header">
 					<h4 class="pull-left">Loss Address</h4>
 					<a class="pull-right btn" ng-click="editLossAddress()">
@@ -232,34 +242,34 @@
 					<div style="clear: both"></div>
 				</div>
 				<div id="loss_address_view" class="contact_view" ng-hide="isLossAddressEditable">
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="fnol_label span2 pull-left">Address 1:</span> 
+							<span class="fnol_label span3 pull-left">Address 1:</span> 
 							<span class="fnol_data">{{ loss.address1 }}</span>
 						</div>
 					</div>
 					
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="span2 pull-left fnol_label">Address 2:</span> 
+							<span class="span3 pull-left fnol_label">Address 2:</span> 
 							<span class="fnol_data">{{ loss.address2 }}</span>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="span2 pull-left fnol_label">Zip Code:</span> 
+							<span class="span3 pull-left fnol_label">Zip Code:</span> 
 							<span class="fnol_data">{{ loss.zip }}</span>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="span2 pull-left fnol_label">City:</span> 
+							<span class="span3 pull-left fnol_label">City:</span> 
 							<span class="fnol_data">{{ loss.city }}</span>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row-fluid">
 						<div class="view_group">
-							<span class="span2 pull-left fnol_label">State:</span> 
+							<span class="span3 pull-left fnol_label">State:</span> 
 							<span class="fnol_data">{{ loss.state }}</span>
 						</div>
 					</div>
@@ -286,6 +296,13 @@
 					</div>					
 				</div>				
 			</div>	
+			
+			<div id="contact_box_new">
+				<span class="new_contact_label">Add New Contact</span>
+				<i class="icon-plus pull-right"></i>
+			</div>
+			
+			
 		</div> <!-- Row End -->
 	
 	
