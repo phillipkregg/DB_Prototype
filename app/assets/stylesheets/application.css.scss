@@ -282,7 +282,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
 }
 
 
-
+span.question {
+  font-size: 20px;
+  color: #666;
+  margin-right: 10px;
+}
 
 
 //***** EQUIPMENT
@@ -297,11 +301,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
     padding: 10px;
     background: #e5e5e5;
     
-    span.question {
-      font-size: 20px;
-      color: #666;
-      margin-right: 10px;
-    }
+    
     
   }
   

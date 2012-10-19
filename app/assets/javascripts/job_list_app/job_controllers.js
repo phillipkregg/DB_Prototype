@@ -21,113 +21,139 @@ function JobDetailController($scope, $routeParams) {
 	var job = Jobs.jobList[$routeParams.jobId - 1];
 		
 	$scope.job = job;	
-	var zones = job.zones;
-	
-	//*** Caller Object
-	$scope.caller  = job.contact_information.caller;	
-	$scope.callerFirstName = $scope.caller.first_name;
+	$scope.areZones = false;
+	$scope.isCallerInfo = false;
 	
 	
-	//*** Loss Address Object
-	$scope.loss = job.contact_information.loss_address;
 	
-	//*** Editable Boolean
-	$scope.isCallerEditable = false;
+	if (job.contact_information) {
+		if (job.contact_information.caller) {
+			$scope.isCallerInfo = true;
+		}
+		var caller = job.contact_information.caller;	
+		var customer = job.contact_information.customer;	
+		var occupant = job.contact_information.occupant;	
+		var loss = job.contact_information.loss;	
 	
-	//*** Caller edit actions
-	$scope.editCaller = function() {
-		$scope.isCallerEditable = true;
-		$("#caller_edit").show( 'drop', 200 );
+	
+	
+		var zones = job.zones;
+		
+		//*** INITIALIZE MAIN OBJECTS		
+		$scope.caller  = caller;	
+		$scope.customer = customer;
+		$scope.occupant = occupant;
+		$scope.loss = loss;
+		
+			
 	}
-	$scope.cancelCallerEdits = function() {
+		
+		//*** Caller Object
+		
+		//$scope.callerFirstName = $scope.caller.first_name;
+		
+		
+		//*** Loss Address Object
+		//$scope.loss = loss;
+		
+		//*** Editable Boolean
 		$scope.isCallerEditable = false;
-		$("#caller_view").show( 'drop', 200 );
-	}
-	$scope.saveCallerEdits = function() {
-		$scope.caller.first_name = $scope.callerFirstName;
-		$scope.isCallerEditable = false;
-	}
 		
-	//*** Customer edit actions
-	$scope.customer = job.contact_information.customer;
-	$scope.isCustomerEditable = false;
-	$scope.editCustomer = function() {
-		$scope.isCustomerEditable = true;		
-		$("#customer_edit").show( 'drop', 200 );
-	}
-	$scope.cancelCustomerEdits = function() {
+		//*** Caller edit actions
+		$scope.editCaller = function() {
+			$scope.isCallerEditable = true;
+			$("#caller_edit").show( 'drop', 200 );
+		}
+		$scope.cancelCallerEdits = function() {
+			$scope.isCallerEditable = false;
+			$("#caller_view").show( 'drop', 200 );
+		}
+		$scope.saveCallerEdits = function() {
+			$scope.caller.first_name = $scope.callerFirstName;
+			$scope.isCallerEditable = false;
+		}
+			
+		//*** Customer edit actions
+		//$scope.customer = job.contact_information.customer;
 		$scope.isCustomerEditable = false;
-		$("#customer_view").show( 'drop', 200 );
-	}
-	$scope.saveCustomerEdits = function() {
-		$scope.isCustomerEditable = false;
+		$scope.editCustomer = function() {
+			$scope.isCustomerEditable = true;		
+			$("#customer_edit").show( 'drop', 200 );
+		}
+		$scope.cancelCustomerEdits = function() {
+			$scope.isCustomerEditable = false;
+			$("#customer_view").show( 'drop', 200 );
+		}
+		$scope.saveCustomerEdits = function() {
+			$scope.isCustomerEditable = false;
+			
+		}
 		
-	}
-	
-	
-	//*** Occupant edit actions
-	
-	$scope.occupant = job.contact_information.occupant;
-	$scope.isOccupantEditable = false;
-	
-	$scope.editOccupant = function() {
-		$scope.isOccupantEditable = true;		
-		$("#occupant_edit").show( 'drop', 200 );
-		$('html, body').animate({ 
-	      scrollTop: $('#occupant_edit').offset().top 
-	 		}, 200);
-	}
-	
-	$scope.cancelOccupantEdits = function() {
-		$scope.isOccupantEditable = false;
-		$("#occupant_view").show( 'drop', 200 );
-	}
-	
-	$scope.saveOccupantEdits = function() {
+		
+		//*** Occupant edit actions
+		
+		//$scope.occupant = job.contact_information.occupant;
 		$scope.isOccupantEditable = false;
 		
-	}
-	
-	
-	
-	
-	
-	//*** Loss Address edit actions
-	$scope.isLossAddressEditable = false;
-	
-	$scope.editLossAddress = function() {
-		$scope.isLossAddressEditable = true;		
-		$("#loss_address_edit").show( 'drop', 200 );
-		$('html, body').animate({ 
-	      scrollTop: $('#loss_address_edit').offset().top 
-	 		}, 200);
-	}
-	
-	$scope.cancelLossAddressEdits = function() {
-		$scope.isLossAddressEditable = false;
-		$("#loss_address_view").show( 'drop', 200 );
-	}
-	$scope.saveLossAddressEdits = function() {
+		$scope.editOccupant = function() {
+			$scope.isOccupantEditable = true;		
+			$("#occupant_edit").show( 'drop', 200 );
+			$('html, body').animate({ 
+		      scrollTop: $('#occupant_edit').offset().top 
+		 		}, 200);
+		}
+		
+		$scope.cancelOccupantEdits = function() {
+			$scope.isOccupantEditable = false;
+			$("#occupant_view").show( 'drop', 200 );
+		}
+		
+		$scope.saveOccupantEdits = function() {
+			$scope.isOccupantEditable = false;
+			
+		}
+		
+		
+		
+		
+		
+		//*** Loss Address edit actions
 		$scope.isLossAddressEditable = false;
 		
-	}
+		$scope.editLossAddress = function() {
+			$scope.isLossAddressEditable = true;		
+			$("#loss_address_edit").show( 'drop', 200 );
+			$('html, body').animate({ 
+		      scrollTop: $('#loss_address_edit').offset().top 
+		 		}, 200);
+		}
+		
+		$scope.cancelLossAddressEdits = function() {
+			$scope.isLossAddressEditable = false;
+			$("#loss_address_view").show( 'drop', 200 );
+		}
+		$scope.saveLossAddressEdits = function() {
+			$scope.isLossAddressEditable = false;
+			
+		}
+		
+		
+		
+		
+		if (job.zones) {
+			$scope.areZones = true;
+			$scope.zones = job.zones;	
+			$scope.zone = $scope.zones[$routeParams.zoneId - 1];
+		}	
+		
+		if ($scope.zone) {
+			$scope.rooms = $scope.zone.rooms;
+			$scope.room = $scope.rooms[$routeParams.roomId - 1];
+		}
+		
+		//**** FNOL Contact Info
 	
-	
-	
-	
-	if (job.zones) {
-		$scope.zones = job.zones;	
-		$scope.zone = $scope.zones[$routeParams.zoneId - 1];
-	}	
-	
-	if ($scope.zone) {
-		$scope.rooms = $scope.zone.rooms;
-		$scope.room = $scope.rooms[$routeParams.roomId - 1];
-	}
-	
-	//**** FNOL Contact Info
-	
-					
+		
 	
 }
 

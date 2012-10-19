@@ -3,7 +3,6 @@
 
 <br />
 
-
 <div class="navbar">
   <div class="navbar-inner">
     <a class="brand" href="#">
@@ -32,11 +31,22 @@
 	
 	<div class="tab-pane active" id="visual">			
 		<div class="well">	
-			<a class="btn btn-primary btn-large pull-right">
+			<a ng-show="areZones" class="btn btn-primary btn-large pull-right">
 				<i class="icon-plus icon-white"></i>
 				Add Zone
 			</a>
 			<br/><br/>
+			
+			<div ng-hide="areZones">
+				<h3>There are currently no zones.</h3>
+				<span class="question">Would you like to add one?</span>
+				<a class="btn btn-primary">
+					<i class="icon-plus-sign icon-white"></i>
+					Yes, add a zone to this job
+				</a>
+				
+			</div>
+			
 			<div>				
 				<div ui-jq="droppable" class="zone_box" ng-repeat="zone in zones">
 					

@@ -2,6 +2,10 @@
 
 <br />
 
+<div ng-hide="isCallerInfo">
+	<h4>You must add Caller Details and Customer Details before adding Zones</h4>
+</div>
+
 <job_sub_nav></job_sub_nav>
 
 
@@ -34,7 +38,7 @@
 				
 				<div id="caller_view" class="contact_view" ng-hide="isCallerEditable">	
 					
-					<img class="contact_image" src="/assets/jack-bauer.jpg" />
+					<!-- <img class="contact_image" src="/assets/jack-bauer.jpg" /> -->
 								
 					
 					<div class="pull-left">
@@ -70,7 +74,7 @@
 				
 				<div id="caller_edit" class="contact_edit" ng-show="isCallerEditable">
 					<label>First Name</label>
-					<input type="text" ng-model="callerFirstName"/>
+					<input type="text" value="{{ caller.first_name }}"/>
 					
 					<label>Last Name</label>
 					<input type="text" value="{{ caller.last_name }}" />
