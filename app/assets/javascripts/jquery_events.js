@@ -64,10 +64,59 @@ $(document).ready(function() {
 		});
 	
 	
+	//***** ADD ROOM BUTTON
 	
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	//*****  EQUIPMENT EFFECTS
+	
+	$(".equipment_box").live('mouseenter', function() {			
+			$(this).tween({			
+				opacity:{
+		      start: 100,
+		      stop: 80,
+		      time: 0,
+		      duration: .2,
+		      effect:'easeInOut'			  
+			   },
+			   shadow:{
+			      start: '0px 0px 0px #000',
+			      stop: '10px 10px 30px #000',
+			      time: 0,
+			      duration: .2,
+			      effect:'easeInOut'
+			   }		   
+		   
+			}).play();
+	});
+		
+	$(".equipment_box").live('mouseleave', function() {			
+		$(this).tween({
+			opacity:{
+		      start: 80,
+		      stop: 100,
+		      time: 0,
+		      duration: .2,
+		      effect:'easeInOut'			  
+			},
+	   
+		   shadow:{
+		      start: '10px 10px 30px #000',
+		      stop: '0px 0px 0px #000',
+		      time: 0,
+		      duration: .2,
+		      effect:'easeInOut'
+		   }
+	   
+		}).play();
+	});
 	
 	
 	

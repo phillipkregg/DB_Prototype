@@ -9,9 +9,17 @@ Jobs.jobList = [
 		first_name: "Jack",
 		loss_city: "Hartford",
 		job_type: "Water",
+		insurance_company: "State Farm",
+		age: "15 days",
+		loss_date: "10/10/2012",
+		claim_number: "123456789",
+		job_status: "Active",
+		dispatch_status: "Submitted",
+		caller: "Jack Bauer",
+		occupant: "Jack Bauer",
+		production_manager: "Harold Potter",
 		
-		contact_information: 
-			{
+		contact_information: {
 				caller:	{
 						last_name: "Bauer",
 						first_name: "Jack",
@@ -86,19 +94,88 @@ Jobs.jobList = [
 						room_id: 1,
 				  		room_name: "Kitchen",
 				  		width: 100,
-						height: 50				
+						height: 50,
+												
+						equipment: [
+							{
+								equipment_id: 1,
+								type: "Dehumidifier",
+								model: "#123456",
+								image: "/assets/dehu.png"								
+							},
+							{
+								equipment_id: 2,
+								type: "Dehumidifier",
+								model: "#654321",
+								image: "/assets/dehu.png"									
+							},
+							{
+								equipment_id: 3,
+								type: "Air Mover",
+								model: "#7565432",
+								image: "/assets/air_mover.png"									
+							}				
+						
+						] 
+									
 				   },
 				   { 
 				   	room_id: 2,
 				  		room_name: "Bathroom",
 				  		width: 100,
-						height: 50				
+						height: 50,		
+						
+						equipment: [
+							{
+								equipment_id: 4,
+								type: "Air Mover",
+								model: "#ac300404",
+								image: "/assets/air_mover.png"									
+							},
+							{
+								equipment_id: 5,
+								type: "Air Mover",
+								model: "#ac9484530",
+								image: "/assets/air_mover.png"									
+							}							
+						
+						] 
+								
 				   },
 				   { 
 				   	room_id: 3,
 				  		room_name: "Dining Room",
 				  		width: 100,
-						height: 50				
+						height: 50,		
+						
+						equipment: [
+							{
+								equipment_id: 6,
+								type: "Air Mover",
+								model: "#ac300404",
+								image: "/assets/air_mover.png"									
+							},
+							{
+								equipment_id: 7,
+								type: "Air Mover",
+								model: "#ac9484530",
+								image: "/assets/air_mover.png"									
+							},
+							{
+								equipment_id: 8,
+								type: "Dehumidifier",
+								model: "#dh9874560",
+								image: "/assets/dehu.png"									
+							},
+							{
+								equipment_id: 9,
+								type: "Dehumidifier",
+								model: "#dh00679990",
+								image: "/assets/dehu.png"								
+							}											
+						
+						] 
+								
 				   }
 				]
 				

@@ -1,6 +1,15 @@
 
+<h4>{{ job.last_name }}, {{ job.first_name }} Job</h4>
 
-<h3>Editing {{ room.room_name }}</h3>
+
+<h3 class="">Editing <span class="gray_highlight">{{ room.room_name }}</span></h3>
+<a class="btn btn-large btn-danger pull-right">
+	<i class="icon-trash icon-white"></i>
+	Delete Room?
+</a>
+	
+
+
 
 <h4>Zone:  {{ zone.zone_name }}</h4>
 
@@ -8,8 +17,29 @@
 <p>Width: {{ room.width }}</p>
 <p>Height: {{ room.height }}</p>
 
-<div class="well">
+
+
+<div id="equipment_container" class="well">
 	<h2>Equipment List</h2>
+		
+	<div ng-repeat="item in room.equipment" class="equipment_box">
+		<a href="/#/job/{{ job.id }}/zones/{{zone.zone_id}}/rooms/{{ room.room_id }}/equipment/{{ item.equipment_id }}" >
+			<p class="equipment_type">{{ item.type }}</p>
+			<p class="equipment_model">{{ item.model }}</p>
+		</a>
+	</div>
+	
+	<div ng-hide="gotEquipment">
+		<h3>There doesn't seem to be any equipment added to this <span class="gray_highlight">{{ room.room_name }}</span></h3>
+		<h4>Would you like to add some?</h4>
+		<a class="btn btn-primary">
+			<i class="icon-plus-sign icon-white"></i>
+			Yes, add equipment to {{ room.room_name }}
+		</a>
+	</div>
+	
+	
+	
 </div>
 
 

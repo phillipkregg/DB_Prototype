@@ -2,6 +2,10 @@
 function JobListController($scope, $location) {
 		
 	$scope.jobs = Jobs.jobList;	
+	var job = "";
+	
+		
+	
 		
 	
 }
@@ -123,14 +127,7 @@ function JobDetailController($scope, $routeParams) {
 	
 	//**** FNOL Contact Info
 	
-	
-	
-	
-	
-	
-	
-	
-				
+					
 	
 }
 
@@ -165,31 +162,75 @@ function ZonesRoomsController($scope, $routeParams) {
 					rooms.push(zones[i].rooms[j])
 				}
 			}
+			
+			//**** Get Individual rooms per zone - instead of all rooms
+			// if (job.zones) {
+				// $scope.zones = job.zones;	
+				// $scope.zone = $scope.zones[$routeParams.zoneId - 1]; 				
+				// for(var i=0; i < $scope.zones.length; i++) {
+					// $scope.rooms = $scope.zones[i].rooms;
+				// } 				
+			// }
+			
+			
 			// set room scope to ALL rooms
 			$scope.rooms = rooms;
 			$scope.room = $scope.rooms[$routeParams.roomId - 1];		
 			
 			
-			//**** Get Individual rooms per zone - instead of all rooms
-			// if (job.zones) {
-				// $scope.zones = job.zones;	
-				// $scope.zone = $scope.zones[$routeParams.zoneId - 1];
-// 				
-				// for(var i=0; i < $scope.zones.length; i++) {
-					// $scope.rooms = $scope.zones[i].rooms;
-				// }
-// 				
-			// }
+			//****** EQUIPMENT LIST			
 			
+			var equipment = [];	
+			$scope.equipment = equipment;	
+			
+			//**** Get ALL equipment in EVERY room
+			for ( var i=0; i < rooms.length; i++) {	
+				if(rooms[i].equipment) {
+					for ( var e=0; e < rooms[i].equipment.length; e++){						
+						equipment.push($scope.rooms[i].equipment[e]);
+					}
+				}	
+			}
+			
+			
+			if($scope.room) {						
+				$scope.gotEquipment = false;	
+				
+				$scope.selectedEquipment = 1;
 						
+				if($scope.room.equipment) {
+					//****** SELECTED EQUIPMENT		
+					$scope.gotEquipment = true;																
+					
+					if($routeParams.equipmentId) {
+						$scope.selectedEquipment = $scope.equipment[$routeParams.equipmentId - 1];						
+					}				
+				} 		
+			}		
 			
 			
-		}
-		
+			
+		}		
 }
 
 
 ZonesRoomsController.$inject = ['$scope', '$routeParams'];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

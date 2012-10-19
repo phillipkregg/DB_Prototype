@@ -1,5 +1,5 @@
 
-<h3>Editing the <span class="job_highlight">{{ job.last_name }}, {{ job.first_name }}</span> Job</h3>
+<h3>Editing the <span class="gray_highlight">{{ job.last_name }}, {{ job.first_name }}</span> Job</h3>
 
 <br />
 
@@ -32,10 +32,44 @@
 	
 	<div class="tab-pane active" id="visual">			
 		<div class="well">	
+			<a class="btn btn-primary btn-large pull-right">
+				<i class="icon-plus icon-white"></i>
+				Add Zone
+			</a>
+			<br/><br/>
 			<div ng-controller="ZonesRoomsController">				
 				<div ui-jq="droppable" class="zone_box" ng-repeat="zone in zones">
-					<h4>{{ zone.zone_name }}</h4><br />
-					<div ng-repeat="room in zone.rooms" class="room_box"><a href="/#/job/{{ job.id }}/zones/{{zone.zone_id}}/rooms/{{ room.room_id }}" >{{ room.room_name }}</a></div>
+					
+					<div class="visual_zone_header">						
+						<h4 class="pull-left">{{ zone.zone_name }}</h4><br />						
+						<div class="visual_zone_controls pull-right">
+							<a class="btn btn-inverse">
+								<i class="icon-pencil icon-white"></i>
+								Monitoring Data
+							</a>
+							<a class="btn btn-inverse">
+								<i class="icon-check icon-white"></i>
+								Validate
+							</a>	
+						</div>					
+					</div>
+					
+					<div class="room_box_container">
+						<div ng-repeat="room in zone.rooms" class="room_box">
+							<a href="/#/job/{{ job.id }}/zones/{{zone.zone_id}}/rooms/{{ room.room_id }}" >
+								{{ room.room_name }}
+							</a>
+						</div>
+						<div >
+							<a class="btn btn-inverse">
+								<i class="icon-plus icon-white"></i>
+								Add Room
+							</a>		
+						</div>	
+									
+					</div>
+					
+					
 				</div>								
 			</div>			
 		</div>			

@@ -30,6 +30,16 @@
       <th>First Name</th>
       <th>Loss City</th>
       <th>Job Type</th>
+      <th>Insurance Company</th>
+      <th>Age</th>
+      <th>Loss Date</th>
+      <th>SERVPRO Claim #</th>
+      <th>Job Status</th>
+      <th>Dispatch Status</th>
+      <th>Caller</th>
+      <th>Occupant</th>
+      <th>Production Manager</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -41,10 +51,19 @@
     		</a>
     	</td>
     	
-    	<td>{{ job.last_name }}</td>
-    	<td ng-model="callerFirstName">{{ job.first_name }}</td>
+    	<td>{{ job.contact_information.caller.last_name }}</td>
+    	<td> {{ job.contact_information.caller.first_name }}</td>
     	<td>{{ job.loss_city }}</td>
     	<td>{{ job.job_type }}</td>
+    	<td>{{ job.insurance_company }}</td>
+    	<td>{{ job.age }}</td>
+    	<td>{{ job.loss_date }}</td>  
+    	<td>{{ job.claim_number }}</td>
+    	<td>{{ job.job_type }}</td>
+    	<td>{{ job.dispatch_status }}</td>
+    	<td>{{ job.caller }}</td>
+    	<td>{{ job.occupant }}</td>
+    	<td>{{ job.production_manager }}</td>
     	
     </tr>
   </tbody>
